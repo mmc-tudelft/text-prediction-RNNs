@@ -38,8 +38,8 @@ class Dataset(object):
         for sentence in S:
             l = len(sentence)
             for i in range(MIN_CONTEXT_LENGTH+1,l):
-                train_text.append( sentence[0:i] ) # TODO lookup word indexes in the vocabulary for one-hot representation
-                train_labels.append( sentence[i] ) # TODO  " " "
+                train_text.append( sentence[0:i] )
+                train_labels.append( sentence[i] )
         
         return train_text,train_labels
     

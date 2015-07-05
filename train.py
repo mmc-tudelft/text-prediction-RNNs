@@ -27,6 +27,7 @@ train_text,train_labels = d.getNextWordPredTrainset(10)
 
 tokenizer = Tokenizer()
 train_tokens = tokenizer.fit_transform(train_text)
+save(train_tokens, settings['FN_TRAINED_TOKENIZER'])
 
 layers = [
     Embedding(size=128, n_features=tokenizer.n_features),
